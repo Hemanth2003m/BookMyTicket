@@ -1,6 +1,6 @@
 # 🚆 Real-Time Train Ticket Booking System
 
-A desktop-based real-time train ticket booking system supporting multiple routes, train classes (e.g., Sleeper, AC, General), and priority-based seat allocation. Built using **Java Swing** and developed in **NetBeans IDE**.
+A desktop-based real-time train ticket booking system supporting multiple routes, train classes (e.g., Sleeper, AC, General), and priority-based seat allocation. Built using **Java Swing**.
 
 ---
 
@@ -14,7 +14,6 @@ This system enables real-time, concurrent train ticket bookings with hierarchica
 
 ### Frontend (GUI):
 - **Java Swing** – GUI framework
-- **NetBeans (ONTL)** – Development IDE
 
 ### Backend / Core:
 - **Java (OOP + Collections Framework)**
@@ -22,7 +21,7 @@ This system enables real-time, concurrent train ticket bookings with hierarchica
 - **Java Sockets (optional)** – For real-time server-client simulation
 
 ### Database:
-- **MySQL / Oracle DB**
+- **MySQL**
 - **JDBC** – Java database connection
 
 ### Other Tools:
