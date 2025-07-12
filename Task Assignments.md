@@ -21,6 +21,7 @@ Assigned to: @saiprabhakar08
 ---
 
 ### 👤 Task 3 – **Compartment & Seat Structure (Tree Data Structure)**
+Assigned to: @koppisettiBhardwajsai
 - Build hierarchical structure: Train → Class → Compartment → Berths
 - Implement tree traversal for seat assignment and search
 - Map berth nodes to pricing and availability
@@ -29,6 +30,7 @@ Assigned to: @saiprabhakar08
 ---
 
 ### 👤 Task 4 – **Booking Logic & Priority Queue**
+Assigned to: @Nithishsrisatya
 - Implement booking request object with passenger type and timestamp
 - Use `PriorityQueue` to manage bookings (Senior > Differently-abled > General)
 - Create `BookingRequest.java` and `BookingManager.java`
@@ -46,6 +48,7 @@ Assigned to: @PRajesh999
 ---
 
 ### 👤 Task 6 – **Berth Recommendation System**
+Assigned to: @sai1234-png
 - Implement `SeatRecommendationEngine.java`
 - Suggest optimal berths (e.g., lower berth for senior citizens)
 - Use graph/search algorithms to find best-fit seats
@@ -54,6 +57,7 @@ Assigned to: @PRajesh999
 ---
 
 ### 👤 Task 7 – **Waiting List & RAC Management**
+Assigned to: @SudheerPabolu
 - Implement queue-based waiting list logic
 - Simulate RAC (Reservation Against Cancellation) handling
 - Auto-promote users from waitlist when cancellations occur
@@ -62,6 +66,7 @@ Assigned to: @PRajesh999
 ---
 
 ### 👤 Task 8 – **Database Design & Integration**
+Assigned to: @22p31a05e6
 - Design ER model and SQL schema for trains, routes, seats, users, bookings
 - Implement `DatabaseManager.java` for all JDBC operations
 - Handle data consistency and rollback logic
