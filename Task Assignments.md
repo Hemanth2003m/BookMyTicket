@@ -1,6 +1,6 @@
 ## 👥 Team Structure & Work Distribution
 
-### 👤 Member 1 – **Authentication & User Module**
+### 👤 Task 1 – **Authentication & User Module**
 - Design Login/Register Swing UI
 - Handle user roles (Admin, VIP, Regular)
 - Connect to database for authentication via JDBC
@@ -8,7 +8,7 @@
 
 ---
 
-### 👤 Member 2 – **Event Management**
+### 👤 Task 2 – **Event Management**
 - Event creation and listing forms (Admin view)
 - Event browsing interface (User view)
 - Store event data in database
@@ -16,7 +16,7 @@
 
 ---
 
-### 👤 Member 3 – **Seat Structure (Tree Data Structure)**
+### 👤 Task 3 – **Seat Structure (Tree Data Structure)**
 - Build hierarchical venue structure (Section → Row → Seat)
 - Implement tree traversal for seat availability
 - Map seat nodes to pricing and availability status
@@ -24,7 +24,7 @@
 
 ---
 
-### 👤 Member 4 – **Booking Logic & Priority Queue**
+### 👤 Task 4 – **Booking Logic & Priority Queue**
 - Implement booking request with priority
 - Use `PriorityQueue` to manage bookings (VIP > Early Bird > Regular)
 - Create `BookingRequest.java` and `BookingManager.java`
@@ -32,7 +32,7 @@
 
 ---
 
-### 👤 Member 5 – **Seat Availability & HashMap**
+### 👤 Task 5 – **Seat Availability & HashMap**
 - Design real-time seat lookup using `HashMap`
 - Update seat status dynamically
 - Display seat availability in the GUI
@@ -40,7 +40,7 @@
 
 ---
 
-### 👤 Member 6 – **Seat Recommendation System**
+### 👤 Task 6 – **Seat Recommendation System**
 - Create `SeatRecommendationEngine.java`
 - Suggest seats based on user preferences (price, location)
 - Implement graph/search algorithms for best-fit matching
@@ -48,7 +48,7 @@
 
 ---
 
-### 👤 Member 7 – **Waiting List Management**
+### 👤 Task 7 – **Waiting List Management**
 - Implement `Queue` for managing waitlisted users
 - Handle auto-promotion when a seat becomes available
 - Update seat status and notify users via UI
@@ -56,7 +56,7 @@
 
 ---
 
-### 👤 Member 8 – **Database Integration**
+### 👤 Task 8 – **Database Integration**
 - Design ER model and implement schema in MySQL/Oracle
 - Write `DatabaseManager.java` for CRUD operations
 - Handle bookings, seat status, user info, and events
@@ -64,7 +64,7 @@
 
 ---
 
-### 👤 Member 9 – **Admin Dashboard**
+### 👤 Task 9 – **Admin Dashboard**
 - Build dashboard UI using Swing
 - Display booking logs, waitlists, and occupancy stats
 - Enable admin to cancel/reschedule bookings
@@ -72,7 +72,7 @@
 
 ---
 
-### 👤 Member 10 – **Payment & Confirmation Module**
+### 👤 Task 10 – **Payment & Confirmation Module**
 - Simulate payment process (dummy gateway)
 - Handle rollback on booking failure
 - Generate ticket summary
@@ -89,9 +89,9 @@
 
 ---
 
-## 📋 Files and Components per Member
+## 📋 Files and Components per Task
 
-| Member | File(s) to Build |
+| Task | File(s) to Build |
 |--------|------------------|
 | 1 | `LoginForm.java`, `User.java`, `AuthManager.java` |
 | 2 | `EventForm.java`, `Event.java`, `EventManager.java` |
@@ -106,5 +106,5 @@
 
 ---
 
-> ✨ Each member should unit test their module before integration. Shared components like `DatabaseManager.java` and `SeatTree.java` must follow agreed interfaces.
+> ✨ Each Task should unit test their module before integration. Shared components like `DatabaseManager.java` and `SeatTree.java` must follow agreed interfaces.
 
