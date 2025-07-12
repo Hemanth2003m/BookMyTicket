@@ -36,6 +36,7 @@ Assigned to: @Hemannth2003m
 ---
 
 ### 👤 Task 5 – **Seat Availability & Status Tracking**
+Assigned to: @PRajesh999
 - Use `HashMap` to track seat availability per train/class/berth
 - Update and synchronize seat status during booking/cancellation
 - Display current availability in real time within the GUI
