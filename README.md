@@ -1,65 +1,37 @@
-# BookMyTicket
-## 🎫 Real-Time Ticket Booking System Synopsis
+# 🎟️ Real-Time Ticket Booking System
 
-A **scalable real-time ticket booking system** designed to manage **multiple concurrent booking requests** across various events, with **dynamic seating categories** and **booking priorities**.
-
----
-
-## 🔑 Key Features
-
-### 🎟 Real-Time Booking & Availability
-- Instant **seat status updates** and **booking confirmation** to users.
-
-### ⭐ Priority-Based Booking System
-- Utilizes **priority queues** to handle **VIP, early bird**, and other **premium user** requests efficiently.
-
-### 🪑 Intelligent Seat Recommendations
-- Implements **graph algorithms** to suggest **optimal seats** based on:
-  - User location preference
-  - Ticket pricing
-  - Group proximity
-
-### 🕒 Waiting List Management
-- Maintains a **fair queue system** for **sold-out events**, ensuring sequential processing.
-
-### 💳 Payment Integration with Rollback
-- **Secure payment handling**
-- Implements **fail-safe rollback** if seat allocation fails after payment
+A desktop-based real-time ticket booking system for multiple events with priority-based booking and intelligent seat management. Built using **Java Swing** and developed in **NetBeans IDE**.
 
 ---
 
-## 📊 Data Structures Used
+## 📌 Project Synopsis
 
-- **Priority Queue (Heap):**  
-  Handles booking requests based on user type and request time.
-
-- **Hash Tables:**  
-  For fast **seat availability checks** and **seat-user mappings**.
-
-- **Trees:**  
-  Represents **venue seating hierarchy**:  
-  `Sections → Rows → Seats`
-
-- **Queues:**  
-  For **waiting list management** and **sequential booking flow**
+This system enables real-time, concurrent ticket bookings for multiple events with a hierarchical venue structure and intelligent seat recommendations. VIP and early bird users get booking priority. Seat availability is shown and updated in real-time using custom data structures and algorithms.
 
 ---
 
-## 🧠 Algorithms Implemented
+## 🛠️ Tech Stack
 
-- **Heap Operations:**  
-  Efficient **insertion/extraction** of booking requests by priority.
+### Frontend (GUI):
+- **Java Swing** – GUI framework
+- **NetBeans (ONTL)** – Development IDE
 
-- **Graph Algorithms:**  
-  For **seat recommendations** based on proximity and pricing.
+### Backend / Core:
+- **Java (OOP + Collections Framework)**
+- **Multithreading** – For concurrent booking processing
+- **Java Sockets (optional)** – For real-time server-client simulation
 
-- **Sorting Algorithms:**  
-  Sorts seats by **price**, **location**, and **availability**.
+### Database:
+- **MySQL / Oracle DB**
+- **JDBC** – Java database connection
 
-- **Load Balancing:**  
-  Distributes booking traffic across **multiple server nodes or partitions** for scalability.
+### Other Tools:
+- **Java Logging API** – For audit logs
+- **Java Serialization (optional)** – For object persistence
+- **Timer / Thread.sleep** – For delay simulation
 
 ---
+
 ## ✅ Requirements
 
 ### Functional Requirements
@@ -77,7 +49,79 @@ A **scalable real-time ticket booking system** designed to manage **multiple con
   - View bookings and waiting lists
 - **Seat Recommendation**
   - Suggest best available seats by preference
+
 ---
 
-> ✅ This system ensures a **seamless, fair, and high-performance booking experience** for users while optimizing seat utilization and server load.
+## 🧩 Components to Build
+
+### Swing UI Screens
+- Login / Registration
+- Event Browser
+- Seat Selection UI
+- Booking Confirmation Popup
+- Admin Dashboard
+- Waitlist Notification
+
+---
+
+### Java Classes
+- `User.java` – User data model
+- `Event.java` – Event details
+- `Seat.java` – Seat status, price, row info
+- `BookingRequest.java` – Request with timestamp & priority
+- `BookingManager.java` – Handles booking queues and seat locking
+- `SeatTree.java` – Tree-based seat hierarchy
+- `DatabaseManager.java` – JDBC operations
+- `AdminManager.java` – Admin actions
+- `SeatRecommendationEngine.java` – Suggests best-fit seats
+
+---
+
+### Core Data Structures
+- `PriorityQueue<BookingRequest>` – For booking priority handling
+- `HashMap<String, Boolean>` – For seat availability lookup
+- `Custom Tree` – Venue > Section > Row > Seat
+- `Queue<BookingRequest>` – For waiting list
+
+---
+
+## 🗃️ Database Schema
+
+### Tables
+- `users`
+  - `id`, `username`, `password`, `role` (admin/user), `type` (VIP/Regular)
+- `events`
+  - `id`, `name`, `date`, `time`, `venue`
+- `seats`
+  - `seat_id`, `event_id`, `row`, `number`, `price`, `is_booked`
+- `bookings`
+  - `booking_id`, `user_id`, `event_id`, `seat_id`, `status`, `timestamp`
+- `waitlist`
+  - `user_id`, `event_id`, `requested_seat`, `priority`, `time_added`
+
+---
+
+## ⚙️ Algorithms Implemented
+- **Heap (Priority Queue)** – VIP / early access booking handling
+- **Graph/Tree Traversal** – For intelligent seat recommendations
+- **Sorting** – For price or proximity-based seat ordering
+- **Load Balancing Simulation** – Booking queue management using threads
+
+---
+
+## 🧪 Future Enhancements
+- Real-time sync using Java RMI or WebSocket
+- Payment Gateway Integration
+- QR Code-based E-tickets
+- Admin Reporting and Analytics Dashboard
+
+---
+
+## 🧑‍💻 Contributors
+- Wait for the reveal of the contributors
+
+---
+
+## 📄 License
+This project is open source and available under the [MIT License](LICENSE).
 
