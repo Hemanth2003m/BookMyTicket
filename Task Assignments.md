@@ -3,7 +3,7 @@
 ---
 
 ### 👤 Task 1 – **Authentication & User Module**
-Assigned to: @Hemannth2003m
+Assigned to: @Hemanth2003m
 - Design Login/Register Swing UI
 - Handle user roles (Admin, Regular, Senior Citizen, Differently-abled)
 - Connect to database for authentication via JDBC
