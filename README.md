@@ -1,6 +1,6 @@
 # 🎟️ Real-Time Ticket Booking System
 
-A desktop-based real-time ticket booking system for multiple events with priority-based booking and intelligent seat management. Built using **Java Swing** and developed in **NetBeans IDE**.
+A desktop-based real-time ticket booking system for multiple events with priority-based booking and intelligent seat management. Built using **Java Swing**.
 
 ---
 
@@ -14,7 +14,6 @@ This system enables real-time, concurrent ticket bookings for multiple events wi
 
 ### Frontend (GUI):
 - **Java Swing** – GUI framework
-- **NetBeans (ONTL)** – Development IDE
 
 ### Backend / Core:
 - **Java (OOP + Collections Framework)**
@@ -22,7 +21,7 @@ This system enables real-time, concurrent ticket bookings for multiple events wi
 - **Java Sockets (optional)** – For real-time server-client simulation
 
 ### Database:
-- **MySQL / Oracle DB**
+- **MySQL**
 - **JDBC** – Java database connection
 
 ### Other Tools:
