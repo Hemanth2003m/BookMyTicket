@@ -57,7 +57,7 @@ Assigned to: @sai1234-png
 ---
 
 ### 👤 Task 7 – **Waiting List & RAC Management**
-Assigned to: @SudheerPabolu
+Assigned to: @22p31a05e6
 - Implement queue-based waiting list logic
 - Simulate RAC (Reservation Against Cancellation) handling
 - Auto-promote users from waitlist when cancellations occur
@@ -66,7 +66,7 @@ Assigned to: @SudheerPabolu
 ---
 
 ### 👤 Task 8 – **Database Design & Integration**
-Assigned to: @22p31a05e6
+Assigned to: @SudheerPabolu
 - Design ER model and SQL schema for trains, routes, seats, users, bookings
 - Implement `DatabaseManager.java` for all JDBC operations
 - Handle data consistency and rollback logic
