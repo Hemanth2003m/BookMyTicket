@@ -1,12 +1,12 @@
-# 🎟️ Real-Time Ticket Booking System
+# 🚆 Real-Time Train Ticket Booking System
 
-A desktop-based real-time ticket booking system for multiple events with priority-based booking and intelligent seat management. Built using **Java Swing**.
+A desktop-based real-time train ticket booking system supporting multiple routes, train classes (e.g., Sleeper, AC, General), and priority-based seat allocation. Built using **Java Swing** and developed in **NetBeans IDE**.
 
 ---
 
 ## 📌 Project Synopsis
 
-This system enables real-time, concurrent ticket bookings for multiple events with a hierarchical venue structure and intelligent seat recommendations. VIP and early bird users get booking priority. Seat availability is shown and updated in real-time using custom data structures and algorithms.
+This system enables real-time, concurrent train ticket bookings with hierarchical train compartments and intelligent seat recommendations. Senior citizens, differently-abled passengers, and VIP users get booking priority. Seat availability is shown and updated in real-time using efficient data structures and algorithms.
 
 ---
 
@@ -14,6 +14,7 @@ This system enables real-time, concurrent ticket bookings for multiple events wi
 
 ### Frontend (GUI):
 - **Java Swing** – GUI framework
+- **NetBeans (ONTL)** – Development IDE
 
 ### Backend / Core:
 - **Java (OOP + Collections Framework)**
@@ -21,7 +22,7 @@ This system enables real-time, concurrent ticket bookings for multiple events wi
 - **Java Sockets (optional)** – For real-time server-client simulation
 
 ### Database:
-- **MySQL**
+- **MySQL / Oracle DB**
 - **JDBC** – Java database connection
 
 ### Other Tools:
@@ -36,18 +37,18 @@ This system enables real-time, concurrent ticket bookings for multiple events wi
 ### Functional Requirements
 - **User Module**
   - Register/Login
-  - Browse events
-  - Book tickets with category (VIP, Regular)
+  - Search trains by source-destination
+  - Book tickets in categories (AC, Sleeper, General)
 - **Booking Logic**
-  - Seat availability check
-  - Priority-based booking queue
-  - Waiting list management
+  - Seat availability check per train/class
+  - Priority-based booking queue (Senior Citizen > Differently-abled > General)
+  - Waiting list and RAC (Reservation Against Cancellation)
   - Booking confirmation and payment simulation
 - **Admin Module**
-  - Manage events/seats
-  - View bookings and waiting lists
+  - Add trains, define routes and compartments
+  - View bookings and manage cancellations
 - **Seat Recommendation**
-  - Suggest best available seats by preference
+  - Suggest best available seats based on preference (lower berth, AC class, etc.)
 
 ---
 
@@ -55,32 +56,33 @@ This system enables real-time, concurrent ticket bookings for multiple events wi
 
 ### Swing UI Screens
 - Login / Registration
-- Event Browser
-- Seat Selection UI
+- Train Search and List View
+- Seat Selection UI (Class-wise view)
 - Booking Confirmation Popup
 - Admin Dashboard
-- Waitlist Notification
+- Waitlist and RAC Notification
 
 ---
 
 ### Java Classes
 - `User.java` – User data model
-- `Event.java` – Event details
-- `Seat.java` – Seat status, price, row info
+- `Train.java` – Train details (number, route, compartments)
+- `Compartment.java` – Class-wise compartments (AC, Sleeper, etc.)
+- `Seat.java` – Seat ID, class, status
 - `BookingRequest.java` – Request with timestamp & priority
 - `BookingManager.java` – Handles booking queues and seat locking
-- `SeatTree.java` – Tree-based seat hierarchy
+- `TrainRoute.java` – Source → Destination mapping
 - `DatabaseManager.java` – JDBC operations
 - `AdminManager.java` – Admin actions
-- `SeatRecommendationEngine.java` – Suggests best-fit seats
+- `SeatRecommendationEngine.java` – Suggests optimal seats
 
 ---
 
 ### Core Data Structures
-- `PriorityQueue<BookingRequest>` – For booking priority handling
-- `HashMap<String, Boolean>` – For seat availability lookup
-- `Custom Tree` – Venue > Section > Row > Seat
-- `Queue<BookingRequest>` – For waiting list
+- `PriorityQueue<BookingRequest>` – Priority-based ticket booking
+- `HashMap<String, Boolean>` – Seat availability check
+- `Tree` – Train → Class → Compartment → Seat
+- `Queue<BookingRequest>` – Waiting list and RAC
 
 ---
 
@@ -88,39 +90,42 @@ This system enables real-time, concurrent ticket bookings for multiple events wi
 
 ### Tables
 - `users`
-  - `id`, `username`, `password`, `role` (admin/user), `type` (VIP/Regular)
-- `events`
-  - `id`, `name`, `date`, `time`, `venue`
+  - `id`, `username`, `password`, `role` (admin/user), `category` (senior citizen, general)
+- `trains`
+  - `train_id`, `name`, `source`, `destination`, `departure_time`, `arrival_time`
+- `compartments`
+  - `compartment_id`, `train_id`, `class` (AC/Sleeper), `total_seats`
 - `seats`
-  - `seat_id`, `event_id`, `row`, `number`, `price`, `is_booked`
+  - `seat_id`, `compartment_id`, `number`, `status`, `berth_type` (lower/upper)
 - `bookings`
-  - `booking_id`, `user_id`, `event_id`, `seat_id`, `status`, `timestamp`
+  - `booking_id`, `user_id`, `train_id`, `seat_id`, `status`, `timestamp`
 - `waitlist`
-  - `user_id`, `event_id`, `requested_seat`, `priority`, `time_added`
+  - `user_id`, `train_id`, `requested_class`, `priority`, `time_added`
 
 ---
 
 ## ⚙️ Algorithms Implemented
-- **Heap (Priority Queue)** – VIP / early access booking handling
-- **Graph/Tree Traversal** – For intelligent seat recommendations
-- **Sorting** – For price or proximity-based seat ordering
-- **Load Balancing Simulation** – Booking queue management using threads
+- **Heap (Priority Queue)** – Priority ticket processing
+- **Tree Traversal** – Class-wise seat assignment logic
+- **Graph Search (optional)** – Route planning or dynamic train linking
+- **Sorting** – For berth/seat recommendations
+- **Load Balancing (Threading)** – Handling concurrent bookings per train
 
 ---
 
 ## 🧪 Future Enhancements
 - Real-time sync using Java RMI or WebSocket
-- Payment Gateway Integration
+- Integration with IRCTC-like APIs
 - QR Code-based E-tickets
-- Admin Reporting and Analytics Dashboard
+- Cancellation and refund workflow
+- Mobile view using JavaFX (optional)
 
 ---
 
 ## 🧑‍💻 Contributors
-- Wait for the reveal of the contributors
+- wait for the reveal of developers
 
 ---
 
 ## 📄 License
 This project is open source and available under the [MIT License](LICENSE).
-
