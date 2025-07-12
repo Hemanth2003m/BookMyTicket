@@ -3,6 +3,7 @@
 ---
 
 ### 👤 Task 1 – **Authentication & User Module**
+Assigned to: @Hemannth2003m
 - Design Login/Register Swing UI
 - Handle user roles (Admin, Regular, Senior Citizen, Differently-abled)
 - Connect to database for authentication via JDBC
@@ -67,6 +68,7 @@
 ---
 
 ### 👤 Task 9 – **Admin Dashboard & Control Panel**
+Assigned to: kowshikjallipalli0105
 - Build a dashboard UI for Admin to:
   - View all trains and bookings
   - Manage cancellations and seat releases
@@ -76,6 +78,7 @@
 ---
 
 ### 👤 Task 10 – **Payment Simulation & Ticket Summary**
+Assigned to: prasanthkarthik25305
 - Simulate payment confirmation flow (dummy payment gateway)
 - Handle payment success/failure rollback
 - Generate printable ticket summary/receipt
