@@ -1,0 +1,35 @@
+-- Routes table
+CREATE TABLE routes (
+    route_id INT AUTO_INCREMENT PRIMARY KEY,
+    source VARCHAR(100),
+    destination VARCHAR(100)
+);
+
+-- route_stations table
+CREATE TABLE route_stations (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    route_id INT,
+    station_name VARCHAR(100),
+    station_order INT,
+    FOREIGN KEY (route_id) REFERENCES routes(route_id) ON DELETE CASCADE
+);
+
+
+-- trains table 
+CREATE TABLE trains (
+    train_id INT AUTO_INCREMENT PRIMARY KEY,
+    train_name VARCHAR(100),
+    train_number VARCHAR(20)
+);
+
+
+-- train_route_map table
+
+
+CREATE TABLE train_route_map (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    train_id INT,
+    route_id INT,
+    FOREIGN KEY (train_id) REFERENCES trains(train_id),
+    FOREIGN KEY (route_id) REFERENCES routes(route_id)
+);
