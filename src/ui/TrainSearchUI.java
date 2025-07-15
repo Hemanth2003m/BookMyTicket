@@ -21,7 +21,6 @@ public class TrainSearchUI extends JFrame {
         setLocationRelativeTo(null);
         setLayout(new BorderLayout());
 
-        // Top input panel
         JPanel inputPanel = new JPanel(new GridLayout(2, 2, 10, 10));
         inputPanel.setBorder(BorderFactory.createTitledBorder("Search by Route"));
 
@@ -35,7 +34,6 @@ public class TrainSearchUI extends JFrame {
 
         add(inputPanel, BorderLayout.NORTH);
 
-        // Table to display train results
         tableModel = new DefaultTableModel();
         trainTable = new JTable(tableModel);
         tableModel.addColumn("Train Name");
@@ -46,11 +44,9 @@ public class TrainSearchUI extends JFrame {
         JScrollPane scrollPane = new JScrollPane(trainTable);
         add(scrollPane, BorderLayout.CENTER);
 
-        // Search Button
         searchButton = new JButton("Search");
         add(searchButton, BorderLayout.SOUTH);
 
-        // Button Action
         searchButton.addActionListener(e -> {
             String source = sourceField.getText().trim().toLowerCase();
             String destination = destinationField.getText().trim().toLowerCase();
@@ -71,9 +67,8 @@ public class TrainSearchUI extends JFrame {
         setVisible(true);
     }
 
-    // Fetch trains with source before destination in order
     private void fetchTrains(String source, String destination) {
-        tableModel.setRowCount(0); // Clear previous results
+        tableModel.setRowCount(0); 
 
         String query =
                 "SELECT DISTINCT t.train_name, t.train_number, rs1.station_name AS from_station, rs2.station_name AS to_station " +
