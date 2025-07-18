@@ -3,7 +3,7 @@
 ---
 
 ### 👤 Task 1 – **Authentication & User Module**
-Assigned to: @Hemanth2003m
+Assigned to: Hemanth2003m
 - Design Login/Register Swing UI
 - Handle user roles (Admin, Regular, Senior Citizen, Differently-abled)
 - Connect to database for authentication via JDBC
@@ -12,7 +12,7 @@ Assigned to: @Hemanth2003m
 ---
 
 ### 👤 Task 2 – **Train & Route Management**
-Assigned to: @saiprabhakar08
+Assigned to: saiprabhakar08
 - Train creation form and route definition (Admin view)
 - Display available trains by source → destination (User view)
 - Store train, class, and route data in the database
@@ -21,7 +21,7 @@ Assigned to: @saiprabhakar08
 ---
 
 ### 👤 Task 3 – **Compartment & Seat Structure (Tree Data Structure)**
-Assigned to: @koppisettiBhardwajsai
+Assigned to: koppisettiBhardwajsai
 - Build hierarchical structure: Train → Class → Compartment → Berths
 - Implement tree traversal for seat assignment and search
 - Map berth nodes to pricing and availability
@@ -30,7 +30,7 @@ Assigned to: @koppisettiBhardwajsai
 ---
 
 ### 👤 Task 4 – **Booking Logic & Priority Queue**
-Assigned to: @Nithishsrisatya
+Assigned to: Nithishsrisatya
 - Implement booking request object with passenger type and timestamp
 - Use `PriorityQueue` to manage bookings (Senior > Differently-abled > General)
 - Create `BookingRequest.java` and `BookingManager.java`
@@ -39,7 +39,7 @@ Assigned to: @Nithishsrisatya
 ---
 
 ### 👤 Task 5 – **Seat Availability & Status Tracking**
-Assigned to: @PRajesh999
+Assigned to: PRajesh999
 - Use `HashMap` to track seat availability per train/class/berth
 - Update and synchronize seat status during booking/cancellation
 - Display current availability in real time within the GUI
@@ -48,7 +48,7 @@ Assigned to: @PRajesh999
 ---
 
 ### 👤 Task 6 – **Berth Recommendation System**
-Assigned to: @sai1234-png
+Assigned to: sai1234-png
 - Implement `SeatRecommendationEngine.java`
 - Suggest optimal berths (e.g., lower berth for senior citizens)
 - Use graph/search algorithms to find best-fit seats
@@ -57,7 +57,7 @@ Assigned to: @sai1234-png
 ---
 
 ### 👤 Task 7 – **Waiting List & RAC Management**
-Assigned to: @22p31a05e6
+Assigned to: 22p31a05e6
 - Implement queue-based waiting list logic
 - Simulate RAC (Reservation Against Cancellation) handling
 - Auto-promote users from waitlist when cancellations occur
@@ -66,7 +66,7 @@ Assigned to: @22p31a05e6
 ---
 
 ### 👤 Task 8 – **Database Design & Integration**
-Assigned to: @SudheerPabolu
+Assigned to: SudheerPabolu
 - Design ER model and SQL schema for trains, routes, seats, users, bookings
 - Implement `DatabaseManager.java` for all JDBC operations
 - Handle data consistency and rollback logic
